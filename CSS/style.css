@@ -1,0 +1,213 @@
+/* Variables */
+:root {
+  --dark-color: #1a3b44;
+  --primary-color: #5ec3bd;
+  --gray-color: #798e93;
+
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Main Styling */
+body {
+  font-family: "Inter";
+  font-weight: bold;
+  color: var(--dark-color);
+  background: #f1f2f6;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+
+/* Header & Navbar */
+#main-header {
+  background: url(../images/pozadina.png) no-repeat center center/cover;
+  height: 100vh;
+}
+
+.navbar .logo {
+  width: 130px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar .container ul {
+  display: flex;
+}
+
+.navbar .container ul li a {
+  margin-left: 30px;
+}
+
+.navbar .container ul li a:hover {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+#main-header .content {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#main-header .content .page-heading {
+  padding-bottom: 140px;
+}
+
+#main-header .content .page-heading h1 {
+  margin-bottom: 15px;
+}
+
+#main-header .content .page-heading h3 {
+  margin-bottom: 30px;
+}
+
+#main-header .content .more i {
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.2s;
+  margin-top: 5px;
+}
+
+#main-header .content .more i:hover {
+  background: var(--gray-color);
+  color: #fff;
+}
+
+/* Raspored */
+#raspored .container .lg-heading {
+  text-align: center;
+  margin: 50px 0;
+}
+
+#raspored .container .events {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#raspored .container .events a {
+  font-size: 22px;
+}
+
+#raspored .container .events a:hover {
+  border-bottom: 3px solid var(--primary-color);
+  color: var(--dark-color);
+}
+
+/* Sponzori */
+#sponzori {
+  height: 1000px;
+  position: relative;
+}
+
+#sponzori .container .lg-heading {
+  text-align: center;
+  margin: 50px;
+}
+
+.futura-logo {
+  width: 150px;
+}
+
+.card {
+  background: #f1f2f6;
+  padding: 25px 50px;
+  width: 800px;
+  box-shadow: 5px 10px 8px #333;
+  border-radius: 35px;
+  z-index: 1;
+  position: absolute;
+  bottom: 135px;
+  right: 170px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.futuraIT {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar .container ul {
+    flex-direction: column;
+  }
+  .navbar .container ul li a {
+    margin: 0;
+  }
+  #main-header .content {
+    padding-top: 50px;
+  }
+  #main-header .content .more {
+    display: none;
+  }
+  .events {
+    flex-direction: column;
+  }
+  #sponzori {
+    height: 700px;
+  }
+  #sponzori .futura-img {
+    display: none;
+  }
+  .box {
+    flex-direction: column;
+  }
+  .box .box-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  #sponzori .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 300px;
+    bottom: 0px;
+    right: 0px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .card p,
+  .card a {
+    font-size: 12px;
+  }
+}
